@@ -1,0 +1,1 @@
+// export const createAsparagus = () => {} return an object with type,height,output properties
