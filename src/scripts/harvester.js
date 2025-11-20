@@ -1,5 +1,5 @@
 // export const harvestPlants (accept plant array)
     // loop to get the output property
         //add plant object to match the output amount
-            //only half of the corn will be added
+            //if type === corn /2
                 //return array of seed objects
