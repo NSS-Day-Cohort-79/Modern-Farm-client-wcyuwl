@@ -36,6 +36,6 @@ end
 harvester-->>main:return harvestedPlants
 main->catalog:invoke catalog(harvestedPlants)
 loop iterate through harvestedPlants
-catalog->>catalog:append harvestedPlant to HTML
+catalog->>DOM:append harvestedPlant to HTML
 end
 ```
