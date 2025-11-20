@@ -1,0 +1,1 @@
+//export const createCorn = () => {} return an array with 2 identical objects
