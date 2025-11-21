@@ -6,6 +6,7 @@ import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { addPlant, usePlants } from "./field.js"
+import { harvestPlants } from "./harvester.js"
 
 //invoke createPlan & pass return value to addPlant
 
@@ -32,3 +33,7 @@ addPlant(wheatSeed)
 // invoke usePlants and log usedPlants
 const usedPlants = usePlants();
 console.log(usedPlants)
+
+//invoke harvestPlants 
+ const harvestedPlants = harvestPlants(usedPlants)
+ console.log(harvestedPlants)
