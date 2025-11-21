@@ -1,36 +1,14 @@
 //import { createPlan } from ./main.js
-import { createAsparagus } from "./seeds/asparagus.js"
-import { createCorn } from "./seeds/corn.js"
-import { createPotato } from "./seeds/potato.js"
-import { createSoybean } from "./seeds/soybean.js"
-import { createSunflower } from "./seeds/sunflower.js"
-import { createWheat } from "./seeds/wheat.js"
 import { addPlant, usePlants } from "./field.js"
 import { harvestPlants } from "./harvester.js"
 import { plantSeeds } from "./tractor.js"
 import { createPlan } from "./plan.js"
 
-//invoke createPlan & pass return value to addPlant
 
-console.log("Welcome to the main module")
-
-const asparagusSeed = createAsparagus()
-addPlant(asparagusSeed)
-
-const cornSeed = createCorn()
-addPlant(cornSeed)
-
-const potatoSeed = createPotato()
-addPlant(potatoSeed)
-
-const soybeanSeed = createSoybean()
-addPlant(soybeanSeed)
-
-const sunflowerSeed = createSunflower()
-addPlant(sunflowerSeed)
-
-const wheatSeed = createWheat()
-addPlant(wheatSeed)
+//Invoke function that plants seeds
+const yearlyPlan = createPlan();
+plantSeeds(yearlyPlan);
+console.log(usePlants())
 
 // invoke usePlants and log usedPlants
 const usedPlants = usePlants();
@@ -39,8 +17,3 @@ console.log(usedPlants)
 //invoke harvestPlants 
  const harvestedPlants = harvestPlants(usedPlants)
  console.log(harvestedPlants)
-
-//Invoke function that plants seeds
-const yearlyPlan = createPlan();
-plantSeeds(yearlyPlan);
-console.log(usePlants())
