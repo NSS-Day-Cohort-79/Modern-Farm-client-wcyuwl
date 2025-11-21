@@ -12,8 +12,6 @@ import { harvestPlants } from "./harvester.js"
 //invoke createPlan & pass return value to addPlant
 
 
-const catalogHTML = Catalog(harvestedPlants)
-document.querySelector(".container").innerHTML = catalogHTML
 
 console.log("Welcome to the main module")
 
@@ -40,5 +38,9 @@ const usedPlants = usePlants();
 console.log(usedPlants)
 
 //invoke harvestPlants 
- const harvestedPlants = harvestPlants(usedPlants)
- console.log(harvestedPlants)
+const harvestedPlants = harvestPlants(usedPlants)
+console.log(harvestedPlants)
+
+Catalog(harvestedPlants)
+//console.log(catalogHTML)
+//document.querySelector(".container").innerHTML = catalogHTML
