@@ -5,24 +5,30 @@ import { createPotato } from "./seeds/potato.js"
 import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
-//invoke createPlan & store return value to a variable
+import { addPlant, usePlants } from "./field.js"
+
+//invoke createPlan & pass return value to addPlant
 
 console.log("Welcome to the main module")
 
 const asparagusSeed = createAsparagus()
-console.log(asparagusSeed)
+addPlant(asparagusSeed)
 
 const cornSeed = createCorn()
-console.log(cornSeed)
+addPlant(cornSeed)
 
 const potatoSeed = createPotato()
-console.log(potatoSeed)
+addPlant(potatoSeed)
 
 const soybeanSeed = createSoybean()
-console.log(soybeanSeed)
+addPlant(soybeanSeed)
 
 const sunflowerSeed = createSunflower()
-console.log(sunflowerSeed)
+addPlant(sunflowerSeed)
 
 const wheatSeed = createWheat()
-console.log(wheatSeed)
+addPlant(wheatSeed)
+
+// invoke usePlants and log usedPlants
+const usedPlants = usePlants();
+console.log(usedPlants)
