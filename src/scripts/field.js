@@ -3,8 +3,8 @@ let field = []
 
 // export addPlant function that pushes seed object to the array
 export const addPlant = (toPlant) => {
-    // check if to Plant is array because of corn
-    if (toPlant.isArray) {
+    // check if toPlant is array because of corn
+    if (Array.isArray(toPlant)) {
         // loop through array and push seeds to field
         toPlant.forEach(seed => field.push(seed))
     } else {
